@@ -9,15 +9,6 @@ if ($_POST) {
 
     try {
         //code...
-        InsertProduct();
-    } catch (PDOException $exception) {
-        //throw $th;
-        die('ERROR: ' . $exception->getMessage());
-    }
-
-    function InsertProduct()
-    {
-        # code...
         $query = 'INSERT INTO products SET p_name=:name, p_description=:description, p_price=:price';
         $stmt = $con->prepare($query);
 
@@ -30,5 +21,8 @@ if ($_POST) {
         } else {
             echo json_encode(array('result' => 'fail'));
         }
+    } catch (PDOException $exception) {
+        //throw $th;
+        die('ERROR: ' . $exception->getMessage());
     }
 }
