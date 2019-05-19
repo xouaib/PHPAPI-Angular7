@@ -19,3 +19,5 @@ INSERT INTO `products` (`p_id`, `p_name`, `p_description`, `p_price`) VALUES
   (7, 'Earphone', 'You need this one if you love music.', 7),  
   (8, 'Pillow', 'Sleeping well is important.', 8.99);  
   
+## Angular 7 CRUD
+https://github.com/xouaib/AngularCRUD
