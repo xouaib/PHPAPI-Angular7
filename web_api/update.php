@@ -9,15 +9,15 @@ if ($_POST) {
 
         $stmt = $con->prepare($query);
 
-        const ID = $_POST['id'];
-        const NAME = $_POST['name'];
-        const DESCRIPTION = $_POST['description'];
-        const PRICE = $_POST['price'];
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $description = $_POST['description'];
+        $price = $_POST['price'];
 
-        $stmt->bindParam(':name', self::NAME);
-        $stmt->bindParam(':description', self::DESCRIPTION);
-        $stmt->bindParam(':price', self::PRICE);
-        $stmt->bindParam(':id', self::ID);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':price', $price);
+        $stmt->bindParam(':id', $id);
 
         if ($stmt->execute()) {
             echo json_encode(array('result' => 'success'));
