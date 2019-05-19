@@ -10,9 +10,9 @@ if ($_POST) {
         $query = 'INSERT INTO products SET p_name=:name, p_description=:description, p_price=:price';
         $stmt = $con->prepare($query);
 
-        $stmt->bindParam(':name', self::NAME);
-        $stmt->bindParam(':description', self::DESCRIPTION);
-        $stmt->bindParam(':price', self::PRICE);
+        $stmt->bindParam(':name', NAME);
+        $stmt->bindParam(':description', DESCRIPTION);
+        $stmt->bindParam(':price', PRICE);
 
         if ($stmt->excute()) {
             echo json_encode(array('result' => 'success'));
