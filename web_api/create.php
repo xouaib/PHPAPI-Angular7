@@ -15,7 +15,7 @@ if ($_POST) {
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':description', $description);
         $stmt->bindParam(':price', $price);
-        
+
         if ($stmt->execute()) {
             echo json_encode(array('result' => 'success'));
         } else {
