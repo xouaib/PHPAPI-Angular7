@@ -1,16 +1,10 @@
 <?php
-  // db properties
-  CONST HOST = 'localhost';
-  CONST DB_NAME = 'ng7_crud';
-  CONST USERNAME = 'root';
-  CONST PASSWORD = '';
-  
-  // Try to connect to the server
-  try {
-      //code...
-  $con = new PDO('mysql: host={self::HOST}, dbname={self::DB_NAME}', self::USERNAME, self::PASSWORD);
-  } catch (PDOException $exception) {
-      //throw $th;
-      echo 'Connection error: '. $exception->getMessage();
-  }
+const HOST = 'localhost';
+const DB_NAME = 'ng7_crud';
+const USERNAME = 'root';
 
+try {
+    $con = new PDO("mysql:host=" . HOST . ";dbname=" . DB_NAME, USERNAME, '');
+} catch (PDOException $exception) {
+    echo 'Connection error: ' . $exception->getMessage();
+}

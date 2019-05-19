@@ -1,6 +1,5 @@
 <?php
 $id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: Record ID not found.'); // raise error if there is param as id with value
-//include database connection
 include 'config/database.php';
 
 try {
