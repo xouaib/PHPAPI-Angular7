@@ -1,6 +1,6 @@
 <?php
+include 'config/database.php';
 if ($_POST) {
-    include 'config/database.php';
 
     try {
 
