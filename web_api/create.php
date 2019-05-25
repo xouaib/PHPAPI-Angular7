@@ -7,7 +7,8 @@ if ($_POST) {
         $query = "INSERT INTO products SET p_name=:name, p_description=:description, p_price=:price";
 
         $stmt = $con->prepare($query);
-
+        $array = [$_POST['name'], $_POST['description'], $_POST['price']];
+                
         $name = $_POST['name'];
         $description = $_POST['description'];
         $price = $_POST['price'];

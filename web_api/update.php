@@ -1,7 +1,7 @@
 <?php
-
+include 'config/database.php';
 if ($_POST) {
-    include 'config/database.php';
+    
     try {
         $query = 'UPDATE products 
                     SET p_name = :name, p_description =: description, p_price = :price 
